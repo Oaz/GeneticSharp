@@ -890,5 +890,152 @@
             <param name="chromosome">The chromosome.</param>
             <returns>The chromosome fitness.</returns>
         </member>
+        <member name="T:GeneticSharp.Extensions.Stretch.StretchNode">
+            <summary>
+            A Node.
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchNode.#ctor(System.String)">
+            <summary>
+            Creates a node from a serialized definition
+            </summary>
+        </member>
+        <member name="P:GeneticSharp.Extensions.Stretch.StretchNode.Name">
+            <summary>
+            Name of the node
+            </summary>
+        </member>
+        <member name="P:GeneticSharp.Extensions.Stretch.StretchNode.Weights">
+            <summary>
+            Weights of the couples with each other node
+            </summary>
+        </member>
+        <member name="T:GeneticSharp.Extensions.Stretch.StretchPosition">
+            <summary>
+            Coordinates of a node within the grid.
+            </summary>
+        </member>
+        <member name="F:GeneticSharp.Extensions.Stretch.StretchPosition.Node">
+            <summary>
+            The node.
+            </summary>
+        </member>
+        <member name="F:GeneticSharp.Extensions.Stretch.StretchPosition.X">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="F:GeneticSharp.Extensions.Stretch.StretchPosition.Y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="T:GeneticSharp.Extensions.Stretch.StretchPair">
+            <summary>
+            Pair of nodes and associated weight
+            </summary>
+        </member>
+        <member name="F:GeneticSharp.Extensions.Stretch.StretchPair.P1">
+            <summary>
+            First node
+            </summary>
+        </member>
+        <member name="F:GeneticSharp.Extensions.Stretch.StretchPair.P2">
+            <summary>
+            Second node
+            </summary>
+        </member>
+        <member name="F:GeneticSharp.Extensions.Stretch.StretchPair.Weigth">
+            <summary>
+            The weigth.
+            </summary>
+        </member>
+        <member name="T:GeneticSharp.Extensions.Stretch.StretchChromosome">
+            <summary>
+            Stretch chromosome. Each genes represent the position of a node on the grid.
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchChromosome.#ctor(System.Int32,System.Int32,System.Int32[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:GeneticSharp.Extensions.Stretch.StretchChromosome"/> class.
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchChromosome.CreateNew">
+            <summary>
+            Creates a new chromosome using the same structure of this.
+            </summary>
+            <returns>The new.</returns>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchChromosome.GenerateGene(System.Int32)">
+            <summary>
+            Generates the gene.
+            </summary>
+            <returns>The gene.</returns>
+            <param name="geneIndex">Gene index.</param>
+        </member>
+        <member name="T:GeneticSharp.Extensions.Stretch.StretchFitness">
+            <summary>
+            A problem where we want to position a number p of nodes on a (n,m) grid
+            so that distance between nodes is as big as possible.
+            Being given a pair of nodes, their distance is weighted by a factor.
+            In other words, we want to maximize the sum of all weighted distances between node pairs.
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchFitness.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GeneticSharp.Extensions.Stretch.StretchFitness"/> class.
+            </summary>
+            <param name="definition">Definition.</param>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchFitness.GetPairsFor(GeneticSharp.Extensions.Stretch.StretchChromosome)">
+            <summary>
+            Compute the weighted the distance for a given chromosome.
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchFitness.GetPositionsFor(GeneticSharp.Extensions.Stretch.StretchChromosome)">
+            <summary>
+            Gets the positions for a given chromosome
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchFitness.WeightedDistanceFor(GeneticSharp.Extensions.Stretch.StretchChromosome)">
+            <summary>
+            Compute the weighted the distance for a given chromosome.
+            </summary>
+        </member>
+        <member name="P:GeneticSharp.Extensions.Stretch.StretchFitness.Width">
+            <summary>
+            Width of the grid
+            </summary>
+        </member>
+        <member name="P:GeneticSharp.Extensions.Stretch.StretchFitness.Height">
+            <summary>
+            Height of the grid
+            </summary>
+        </member>
+        <member name="P:GeneticSharp.Extensions.Stretch.StretchFitness.Nodes">
+            <summary>
+            Nodes to put on the grid
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchFitness.Evaluate(GeneticSharp.Domain.Chromosomes.IChromosome)">
+            <summary>
+            Evaluate the specified chromosome.
+            </summary>
+        </member>
+        <member name="T:GeneticSharp.Extensions.Stretch.StretchParser">
+            <summary>
+            Utility to define Stratch problem data from strings.
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchParser.Rows(System.String)">
+            <summary>
+            Split a text into rows
+            </summary>
+        </member>
+        <member name="M:GeneticSharp.Extensions.Stretch.StretchParser.Tokens(System.String)">
+            <summary>
+            Split a row into tokens
+            </summary>
+        </member>
     </members>
 </doc>
