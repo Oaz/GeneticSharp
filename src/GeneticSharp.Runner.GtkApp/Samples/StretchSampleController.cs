@@ -133,7 +133,8 @@ namespace GeneticSharp.Runner.GtkApp.Samples
       var bestChromosome = (StretchChromosome)Context.Population?.BestChromosome;
       if (bestChromosome == null)
         return;
-      DrawPairs(bestChromosome);
+			Context.WriteText("Distance: {0:n2}", m_fitness.WeightedDistanceFor(bestChromosome));
+			DrawPairs(bestChromosome);
       DrawNodes(bestChromosome);
     }
 
