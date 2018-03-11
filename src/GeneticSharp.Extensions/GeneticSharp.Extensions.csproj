@@ -82,6 +82,10 @@
     <Compile Include="..\GeneticSharp.Domain\Properties\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="Stretch\StretchNode.cs" />
+    <Compile Include="Stretch\StretchChromosome.cs" />
+    <Compile Include="Stretch\StretchFitness.cs" />
+    <Compile Include="Stretch\StretchParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeneticSharp.Domain\GeneticSharp.Domain.csproj">
@@ -106,7 +110,7 @@
     <MonoDevelop>
       <Properties>
         <Policies>
-          <DotNetNamingPolicy DirectoryNamespaceAssociation="PrefixedHierarchical" ResourceNamePolicy="FileFormatDefault" />
+          <DotNetNamingPolicy ResourceNamePolicy="FileFormatDefault" DirectoryNamespaceAssociation="PrefixedHierarchical" />
         </Policies>
       </Properties>
     </MonoDevelop>
@@ -117,4 +121,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Stretch\" />
+  </ItemGroup>
 </Project>

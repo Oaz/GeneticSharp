@@ -71,6 +71,10 @@
     <Compile Include="Drawing\BitmapTest.cs" />
     <Compile Include="Ghostwriter\GhostwriterTest.cs" />
     <Compile Include="Mathematic\EqualityFitnessTest.cs" />
+    <Compile Include="Stretch\StretchChromosomeTest.cs" />
+    <Compile Include="Stretch\StretchNodeTest.cs" />
+    <Compile Include="Stretch\StretchFitnessTest.cs" />
+    <Compile Include="Stretch\StretchParserTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeneticSharp.Domain\GeneticSharp.Domain.csproj">
@@ -98,7 +102,7 @@
     <MonoDevelop>
       <Properties>
         <Policies>
-          <DotNetNamingPolicy DirectoryNamespaceAssociation="PrefixedHierarchical" ResourceNamePolicy="FileFormatDefault" />
+          <DotNetNamingPolicy ResourceNamePolicy="FileFormatDefault" DirectoryNamespaceAssociation="PrefixedHierarchical" />
         </Policies>
       </Properties>
     </MonoDevelop>
@@ -108,5 +112,6 @@
   <ItemGroup>
     <Folder Include="Drawing\" />
     <Folder Include="Ghostwriter\" />
+    <Folder Include="Stretch\" />
   </ItemGroup>
 </Project>
